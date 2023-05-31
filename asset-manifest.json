@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/goit-testwork-01/static/css/main.e6c13ad2.css",
+    "main.js": "/goit-testwork-01/static/js/main.67b52868.js",
+    "static/js/787.a2ed9d9b.chunk.js": "/goit-testwork-01/static/js/787.a2ed9d9b.chunk.js",
+    "index.html": "/goit-testwork-01/index.html",
+    "main.e6c13ad2.css.map": "/goit-testwork-01/static/css/main.e6c13ad2.css.map",
+    "main.67b52868.js.map": "/goit-testwork-01/static/js/main.67b52868.js.map",
+    "787.a2ed9d9b.chunk.js.map": "/goit-testwork-01/static/js/787.a2ed9d9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.67b52868.js"
+  ]
+}

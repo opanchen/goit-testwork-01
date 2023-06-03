@@ -1,16 +1,17 @@
-import css from './HomeCard.module.css';
-import logo from '../../images/card-logo.png';
-import element from '../../images/card-element-01.png';
-import ellipse from '../../images/card-element-02 .png';
-import rectangle from '../../images/card-element-03.png';
-import userDefaultImg from '../../images/user-default.png';
-import { selectFollowedUsers } from 'services/localStorageAPI';
 import { Link } from 'react-router-dom';
-import { getVisibleQuantity } from 'helpers/getVisibleQuantity';
+import { fakeUsersAPI } from 'services';
+import { getVisibleQuantity } from 'helpers';
+import css from './HomeCard.module.css';
+
+import logo from 'images/card-logo.png';
+import element from 'images/card-element-01.png';
+import ellipse from 'images/card-element-02 .png';
+import rectangle from 'images/card-element-03.png';
+import userDefaultImg from 'images/user-default.png';
 
 export const HomeCard = () => {
 
-    const subscriptions = selectFollowedUsers();
+    const subscriptions = fakeUsersAPI.selectFollowedUsers();
 
 
     return (
@@ -35,13 +36,7 @@ export const HomeCard = () => {
                
 
                 <Link className={css.link} to="/tweets">Details</Link>
-                {/* <button className={btnClassName} onClick={onBtnClick} type='button' aria-label='Following button'>{btnText}</button> */}
             </div>
-
-
-
-
-
         </div>
     )
 }

@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import css from './FilterDropdown.module.css';
+
 
 export const FilterDropdown = ({onSelect, placeholder}) => {
 
@@ -63,4 +65,9 @@ export const FilterDropdown = ({onSelect, placeholder}) => {
            
         </div>
     )
+}
+
+FilterDropdown.propTypes = {
+    placeholder: PropTypes.string.isRequired,
+    onSelect: PropTypes.func.isRequired,
 }

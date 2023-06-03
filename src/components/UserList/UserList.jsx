@@ -1,5 +1,7 @@
-import { UserCard } from "components/UserCard/UserCard";
+import PropTypes from 'prop-types';
+import { UserCard } from "components";
 import css from './UserList.module.css';
+
 
 export const UserList = ({users}) => {
 
@@ -19,4 +21,15 @@ export const UserList = ({users}) => {
             )})}
         </ul>
     )
+}
+
+UserList.propTypes = {
+    users: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        user: PropTypes.string.isRequired,
+        avatar: PropTypes.string,
+        tweets: PropTypes.number.isRequired,
+        followers: PropTypes.number.isRequired,
+        isFollowing: PropTypes.bool,
+    }),).isRequired,
 }

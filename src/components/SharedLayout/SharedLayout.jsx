@@ -1,5 +1,5 @@
-import { Navigation } from "components/Navigation/Navigation"
 import { Outlet } from "react-router-dom";
+import { Navigation } from "components"
 import css from './SharedLayout.module.css';
 
 export const SharedLayout = () => {

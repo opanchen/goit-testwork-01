@@ -1,12 +1,15 @@
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import { fakeUsersAPI } from 'services';
+import { getVisibleQuantity } from 'helpers';
 import css from './UserCard.module.css';
+
 import logo from 'images/card-logo.png';
 import element from 'images/card-element-01.png';
 import ellipse from 'images/card-element-02 .png';
 import rectangle from 'images/card-element-03.png';
 import userDefaultImg from 'images/user-default.png';
-import { useEffect, useState } from 'react';
-import { getVisibleQuantity } from 'helpers/getVisibleQuantity';
-import { updateLocalStorage } from 'services/localStorageAPI';
+
 
 export const UserCard = ({id, name, avatar, tweets, followers,following}) => {
 
@@ -15,7 +18,7 @@ export const UserCard = ({id, name, avatar, tweets, followers,following}) => {
     const [isFollowing, setIsFollowing] = useState(following);
 
     useEffect(() => {
-        updateLocalStorage(id, isFollowing, followersQuantity)
+        fakeUsersAPI.updateLocalStorage(id, isFollowing, followersQuantity)
     }, [followersQuantity, id, isFollowing])
 
     const userImg = avatar ? avatar : userDefaultImg;
@@ -56,4 +59,13 @@ export const UserCard = ({id, name, avatar, tweets, followers,following}) => {
             </div>
         </li>
     )
+}
+
+UserCard.propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    tweets: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+    isFollowing: PropTypes.bool,
 }

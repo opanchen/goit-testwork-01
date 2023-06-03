@@ -1,8 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { SharedLayout } from "components/SharedLayout/SharedLayout";
-import { Home } from "pages/Home/Home";
-import { Tweets } from "pages/Tweets/Tweets";
-
+import { Home, Tweets } from "pages";
+import { SharedLayout } from "components";
 
 export const App = () => {
 
@@ -16,22 +14,6 @@ export const App = () => {
     </Routes>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import logo from './logo.svg';
 // import './App.css';
 
 // function App() {

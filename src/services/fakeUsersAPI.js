@@ -1,10 +1,32 @@
+import axios from "axios";
+
 const LS_KEY = 'testwork-users';
 
-export const getLocalStorage = () => {
+axios.defaults.baseURL = 'https://6477e89e362560649a2d08a9.mockapi.io/api/v1';
+
+const fetchUsers = async () => {
+    try {
+        const response = await axios.get('/users');
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getVisibleUsers = (page, users) => {
+
+    const perPage = 3;
+    const quantity = page * perPage;
+
+    return  users.slice(0, quantity);
+}
+
+
+const getLocalStorage = () => {
     return JSON.parse(localStorage.getItem(LS_KEY));
 }
 
-export const initLocalStorage = (data) => {
+const initLocalStorage = (data) => {
     const storage = getLocalStorage();
 
     if (storage === null) {
@@ -29,11 +51,9 @@ export const initLocalStorage = (data) => {
 
         return localStorage.setItem(LS_KEY, JSON.stringify(newStorage))
     }
-
-
 }
 
-export const updateLocalStorage = (id, isFollowing, followersQuantity) => {
+const updateLocalStorage = (id, isFollowing, followersQuantity) => {
 
     const storage = getLocalStorage();
 
@@ -55,7 +75,7 @@ export const updateLocalStorage = (id, isFollowing, followersQuantity) => {
     localStorage.setItem(LS_KEY, JSON.stringify(newStorage));
 }
 
-export const selectFollowedUsers = () => {
+const selectFollowedUsers = () => {
    const storage = getLocalStorage();
 
    if (storage) {
@@ -63,7 +83,7 @@ export const selectFollowedUsers = () => {
    }
 }
 
-export const selectUnfollowedUsers = () => {
+const selectUnfollowedUsers = () => {
    const storage = getLocalStorage();
 
    if (storage) {
@@ -71,7 +91,18 @@ export const selectUnfollowedUsers = () => {
    }
 }
 
-export const selectAllUsers = () => {
+const selectAllUsers = () => {
     return getLocalStorage();
+}
+
+export const fakeUsersAPI = {
+    fetchUsers,
+    getVisibleUsers,
+    getLocalStorage,
+    initLocalStorage,
+    updateLocalStorage,
+    selectAllUsers,
+    selectFollowedUsers,
+    selectUnfollowedUsers,
 }
 

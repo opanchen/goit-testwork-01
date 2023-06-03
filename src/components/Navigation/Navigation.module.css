@@ -1,0 +1,19 @@
+.page-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.link {
+    padding: 8px 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #373737;
+
+}
+
+.link-current {
+    color: rgb(4, 137, 4);
+}

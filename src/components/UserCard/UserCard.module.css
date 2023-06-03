@@ -1,0 +1,149 @@
+.card {
+    position: relative;
+    width: 380px;
+    height: 460px;
+    background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+    box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+    border-radius: 20px;
+}
+
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 76px;
+    height: 22px;
+}
+
+.element {
+    position: absolute;
+    top: 28px;
+    left: 36px;
+}
+
+
+.rectangle {
+    position: absolute;
+    top: 214px;
+    left: 0;
+
+}
+
+.ellipse {
+    position: absolute;
+    top: 178px;
+    left: 150px
+
+}
+
+.avatar {
+    position: absolute;
+    top: 186px;
+    left: 163px;
+    background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+    border-radius: 50%;
+    border-width: 9px;
+    border-color: #EBD8FF;
+}
+
+.inner {
+  
+
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    width: 100%;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: #EBD8FF;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.button {
+    width: 196px;
+    height: 50px;
+    background-color: #EBD8FF;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+    border-radius: 10.3108px;
+    border-color: transparent;
+    cursor: pointer;
+   
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.22;
+    text-transform: uppercase;
+    color: #373737;
+    transition: border-color 250ms linear, color 250ms linear;
+
+
+}
+
+.button:hover,
+.button:focus {
+    border-color: rgb(9, 9, 90);
+    color: rgb(9, 9, 90);
+}
+
+.followed {
+    background-color: #5CD3A8;
+}
+
+@media screen and (max-width: 412px) {
+    .card {
+        width: 288px;
+    }
+
+    .element {
+        width: 216px;
+        height: auto;
+        top: 48px;
+    }
+
+    .rectangle {
+        width: 288px;
+    }
+
+    .ellipse {
+        left: 100px;
+    }
+
+    .avatar {
+        left: 113px;
+    }
+}
+
+@media screen and (min-width: 808px) {
+    .card {
+        flex-basis: calc((100% - 16px * 1) / 2);
+    }
+
+    .rectangle {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1204px) {
+    .card {
+        flex-basis: calc((100% - 16px * 2) / 3);
+    }
+}

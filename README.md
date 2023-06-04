@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# GoIT Tweets App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[VIEW LIVE PAGE](https://opanchen.github.io/goit-testwork-01)
 
-## Available Scripts
+## Testwork for IT School GoIT
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application simulates a simplified version of a social network, where the user can view other people's profiles and follow them. 
+At the same time, the current number of user subscriptions is displayed in his profile on the Home page.
+![](https://media.giphy.com/media/IPBeQTADxa2iVPDYyh/giphy.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On the front-end side, pagination and filtering of the user list by "All", "Follow" and "Following" categories are implemented.
 
-### `npm test`
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTdiMTE4MTM3MmFjYTNmMDk2OTQ3YTU3NTQxMjYzZjUyNDVhNjE1NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/kjmJGCAluPInvK5s4t/giphy.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+According to the requirements of the project, the [mockapi.io](https://mockapi.io/) service is used as a backend, where the data is represented by an array of objects with keys: "id", "user", "avatar", "followers" and "tweets". 
 
-### `npm run build`
+> The project does not use Redux. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Receiving, storing and processing data takes place in __fakeUsersAPI.js__ using [axios](https://axios-http.com/) and __local storage__. 
+After increasing the array of data on the moke.api service, the list of users is updated keeping the current state.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technology stack & additional dependencies
 
-### `npm run eject`
+HTML5
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+CSS3
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+JavaScript
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React [React Router Dom, React Helmet, React Icons]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+axios
 
-## Learn More
+gh-pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Creating & building a repository by template
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was created with
+[Create React App](https://github.com/facebook/create-react-app). To get
+acquainted and configure additional features
+[refer to documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Code Splitting
+File __jsconfig.json__ has been created for more convenient import of files/components inside an src folder. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Added __404.html__ file and the corresponding script in __index.html__ to handle the 404  error when the page is reloaded.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

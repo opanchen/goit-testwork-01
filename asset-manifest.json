@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goit-testwork-01/static/css/main.561c7517.css",
-    "main.js": "/goit-testwork-01/static/js/main.f7c0bc81.js",
+    "main.js": "/goit-testwork-01/static/js/main.7a97f20d.js",
     "static/js/787.a2ed9d9b.chunk.js": "/goit-testwork-01/static/js/787.a2ed9d9b.chunk.js",
     "static/media/card-element-01.png": "/goit-testwork-01/static/media/card-element-01.b1653cd34a1cf70f2134.png",
     "static/media/montserrat-v25-latin-700.woff2": "/goit-testwork-01/static/media/montserrat-v25-latin-700.56c09b9a46af6a54eeb3.woff2",
@@ -10,11 +10,11 @@
     "static/media/montserrat-v25-latin-600.woff2": "/goit-testwork-01/static/media/montserrat-v25-latin-600.5d6df38dd70f631c488b.woff2",
     "index.html": "/goit-testwork-01/index.html",
     "main.561c7517.css.map": "/goit-testwork-01/static/css/main.561c7517.css.map",
-    "main.f7c0bc81.js.map": "/goit-testwork-01/static/js/main.f7c0bc81.js.map",
+    "main.7a97f20d.js.map": "/goit-testwork-01/static/js/main.7a97f20d.js.map",
     "787.a2ed9d9b.chunk.js.map": "/goit-testwork-01/static/js/787.a2ed9d9b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.561c7517.css",
-    "static/js/main.f7c0bc81.js"
+    "static/js/main.7a97f20d.js"
   ]
 }

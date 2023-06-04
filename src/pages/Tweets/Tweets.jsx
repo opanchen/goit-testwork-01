@@ -82,7 +82,7 @@ export const Tweets = () => {
                 <title>Tweets</title>
             </Helmet>
 
-            <div className={css.wrapper}>
+            <section className={css.wrapper}>
                 <h1 className="visually-hidden">Users with tweets</h1>
 
                 <div className={css.nav} >
@@ -108,7 +108,7 @@ export const Tweets = () => {
                         }
                     </>
                 } 
-            </div>
+            </section>
         </>
     )
 }

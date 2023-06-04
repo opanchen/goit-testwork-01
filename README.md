@@ -8,6 +8,7 @@
 
 The application simulates a simplified version of a social network, where the user can view other people's profiles and follow them. 
 At the same time, the current number of user subscriptions is displayed in his profile on the Home page.
+
 ![](https://media.giphy.com/media/IPBeQTADxa2iVPDYyh/giphy.gif)
 
 On the front-end side, pagination and filtering of the user list by "All", "Follow" and "Following" categories are implemented.

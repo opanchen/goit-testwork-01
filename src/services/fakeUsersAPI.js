@@ -13,6 +13,15 @@ const fetchUsers = async () => {
     }
 }
 
+const updateFollowers = async ({id, followersQuantity}) => {
+    try {
+        await axios.put(`/users/${id}`, {followers: followersQuantity});
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const getVisibleUsers = (page, users) => {
 
     const perPage = 3;
@@ -104,5 +113,6 @@ export const fakeUsersAPI = {
     selectAllUsers,
     selectFollowedUsers,
     selectUnfollowedUsers,
+    updateFollowers,
 }
 

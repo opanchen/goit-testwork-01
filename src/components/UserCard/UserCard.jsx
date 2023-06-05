@@ -16,25 +16,43 @@ export const UserCard = ({id, name, avatar, tweets, followers,following}) => {
     const tweetsQuantity = tweets;
     const [followersQuantity, setFollowersQuantity] = useState(followers);
     const [isFollowing, setIsFollowing] = useState(following);
-
+    
     useEffect(() => {
         fakeUsersAPI.updateLocalStorage(id, isFollowing, followersQuantity)
     }, [followersQuantity, id, isFollowing])
-
+    
+    
     const userImg = avatar ? avatar : userDefaultImg;
-
+    
     const btnClassName = isFollowing 
     ? `${css.button} ${css.followed}` 
     : `${css.button}`;
 
     const btnText = isFollowing ? 'Following' : 'Follow';
 
+    const increaseFollowersQuantity = () => {
+        const newNumber = followersQuantity + 1;
+
+        setFollowersQuantity(newNumber);
+        
+        fakeUsersAPI.updateFollowers({id, followersQuantity: newNumber})
+    }
+
+    const decreaseFollowersQuantity = () => {
+        const newNumber = followersQuantity - 1;
+        
+        setFollowersQuantity(newNumber);
+       
+        fakeUsersAPI.updateFollowers({id, followersQuantity: newNumber})
+    }
+
     const onBtnClick = () => {
         setIsFollowing(!isFollowing);
 
         isFollowing 
-        ? setFollowersQuantity(followersQuantity - 1)
-        : setFollowersQuantity(followersQuantity +1);
+        ? decreaseFollowersQuantity()
+        : increaseFollowersQuantity()
+
     } 
 
     return (
